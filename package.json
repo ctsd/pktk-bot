@@ -1,0 +1,29 @@
+{
+  "name": "pktk-bot",
+  "version": "1.0.0",
+  "description": "Pokie Talkie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ctsd/pktk-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "messenger",
+    "facebook"
+  ],
+  "author": "CTSD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ctsd/pktk-bot/issues"
+  },
+  "homepage": "https://github.com/ctsd/pktk-bot",
+  "dependencies": {
+    "botkit": "^0.2.2",
+    "request": "^2.72.0",
+    "smsg": "^1.0.61"
+  }
+}
