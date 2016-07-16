@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ctsd/pktk-bot",
   "dependencies": {
-    "botkit": "^0.2.2",
+    "botkit": "git+https://github.com/howdyai/botkit.git",
     "request": "^2.72.0",
     "smsg": "^1.0.61"
   }
