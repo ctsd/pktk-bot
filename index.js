@@ -414,27 +414,24 @@ controller.on('message_received', function(bot, message) {
 
   if (message.text != undefined) {
 
-    bot.startConversation(message, function(err,convo) {
-
-      request({
-        method: "POST",
-          uri: process.env.api_url + 'message' + "?verify_token=" + process.env.verify_token,
-          json: { messenger_id: message.user, text: message.text }
-        },
-        function (error, response, body) {
-          if (!error && response.statusCode == 200)
-            console.log("Message succesfully broadcasted");
-          else if (response.statusCode == 404) {
+    request({
+      method: "POST",
+        uri: process.env.api_url + 'message' + "?verify_token=" + process.env.verify_token,
+        json: { messenger_id: message.user, text: message.text }
+      },
+      function (error, response, body) {
+        if (!error && response.statusCode == 200)
+          console.log("Message succesfully broadcasted");
+        else if (response.statusCode == 404) {
+          bot.startConversation(message, function(err,convo) {
             initiateUser(convo);
-            return
-          }
-          else if (response.statusCode == 402)
-            convo.say("Sorry, I don't understand your request. Try typing \"help\".");
-          convo.next();
+          });
         }
-      );
+        else if (response.statusCode == 402)
+          bot.reply(message, "Sorry, I don't understand your request. Try typing \"help\".");
+      }
+    );
 
-    });
   }
 });
 
