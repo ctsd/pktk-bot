@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
   font-style: 1em;
-  background: #ffffba;
+  background: #FFF;
   color: #374D76;
 }
 
@@ -13,35 +13,27 @@ h1 {
 }
 
 header {
-  background: #FFF;
-  height: 70px;
-  padding: 10px;
+  background: #ffffba;
+  padding: 30px 10px;
   text-align: center;
 }
 header .wrapper {
   height: 100%;
   display: inline-block;
 }
-header img.logo {
-  height: 100%;
-  max-height: 75%;
-  float: left;
+header img.calculus {
+  max-width: 100%;
 }
-header h1 {
-  margin: 0;
-  margin-left: 50px;
-  line-height: 70px;
-  white-space: nowrap;
-}
+
 
 .content-wrapper {
   width: 95%;
   max-width: 600px;
-  margin: 70px auto;
+  margin: 30px auto;
 }
-
-.content-wrapper:not(.privacy-policy) {
-  text-align: center;
+.content-wrapper h1 {
+  text-align: left;
+  margin: 0;
 }
 
 .content-wrapper.privacy-policy h2 {
